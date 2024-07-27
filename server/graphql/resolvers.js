@@ -1,5 +1,5 @@
-import { GraphQLError } from 'graphql';
-import { createMessage, getMessages } from './db/messages.js';
+import { GraphQLError } from "graphql";
+import { createMessage, getMessages } from "../db/messages.js";
 
 export const resolvers = {
   Query: {
@@ -18,7 +18,7 @@ export const resolvers = {
 };
 
 function unauthorizedError() {
-  return new GraphQLError('Not authenticated', {
-    extensions: { code: 'UNAUTHORIZED' },
+  return new GraphQLError("Not authenticated", {
+    extensions: { code: "UNAUTHORIZED" },
   });
 }
